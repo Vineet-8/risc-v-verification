@@ -1,0 +1,17 @@
+*.out
+*.vvp
+*.vcd
+*.fst
+*.log
+results/*
+!results/.gitkeep
+uvm-core/
+.DS_Store
+._*
+*.swp
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+tmp/
+temp/
