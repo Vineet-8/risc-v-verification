@@ -2,7 +2,7 @@
 
 ## Summary
 
-**Date**: $(date 2025-12-14)
+**Date**: 2025-12-14
 **Total Tests**: 4
 **Passed**: 4
 **Failed**: 0
