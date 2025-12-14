@@ -69,4 +69,4 @@ risc-v-verification/
 
 ## Author
 
-B.Tech ECE | ASIC Verification Engineer
+Vineet P T (B.Tech ECE)  
