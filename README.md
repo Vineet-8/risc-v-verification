@@ -2,23 +2,6 @@
 
 Complete verification environment for RISC-V processors achieving industry-standard coverage.
 
-## Quick Start
-
-```bash
-brew install icarus-verilog surfer
-
-cd rtl
-curl -O https://raw.githubusercontent.com/YosysHQ/picorv32/master/picorv32.v
-cd ..
-
-cd sim
-./run_simple.sh
-surfer ../results/waves.vcd
-
-./run_all_tests.sh
-```
-
-
 ![Tests](https://img.shields.io/badge/tests-4%2F4%20passing-brightgreen)
 ![Coverage](https://img.shields.io/badge/coverage-87%25-green)
 ![Checks](https://img.shields.io/badge/checks-16%2F16%20passing-brightgreen)
@@ -96,23 +79,97 @@ risc-v-verification/
 ├── docs/             Documentation
 └── results/          Reports
 ```
+## 🚀 Quick Start
+```bash
+# Clone repository
+git clone https://github.com/Vineet-8/risc-v-verification.git
+cd risc-v-verification
 
+# Install dependencies (macOS)
+brew install icarus-verilog surfer
 
+# Run all tests
+cd sim
+./run_all_tests.sh
 
-## Coverage Achieved
+# View waveforms
+surfer ../results/*.vcd
+```
+## 📚 Documentation
 
-- Instruction coverage: 95%
-- Branch coverage: 88%
-- Address coverage: 92%
-- Overall: 87%
+- [Verification Plan](docs/verification_plan.md) - Complete strategy
+- [Test Results](docs/test_results.md) - Detailed results
+- [Bug Log](docs/bug_log.md) - Issues found & analyzed
+- [Coverage Report](docs/coverage_report.md) - Coverage analysis
 
-## Documentation
+## 🔧 Technical Stack
 
-- [Verification Plan](docs/verification_plan.md)
-- [Test Results](docs/test_results.md)
-- [Bug Log](docs/bug_log.md)
-- [Coverage Report](docs/coverage_report.md)
+- **Design**: PicoRV32 (RV32IMC)
+- **Language**: SystemVerilog
+- **Simulator**: Icarus Verilog
+- **Waveform Viewer**: Surfer
+- **Version Control**: Git
 
-## Author
+## 💡 Skills Demonstrated
 
-Vineet P T (B.Tech ECE)  
+### Verification
+- Testbench architecture
+- Directed testing
+- Coverage-driven verification
+- Protocol checking
+- Bug analysis
+
+### Technical
+- SystemVerilog
+- RISC-V ISA
+- Memory protocols
+- Simulation methodology
+- Professional documentation
+
+## 🎯 Future Enhancements
+
+Project structure ready for:
+- [ ] UVM methodology integration
+- [ ] Constrained random testing
+- [ ] Peripheral verification (UART, SPI)
+- [ ] Advanced coverage analysis
+- [ ] Formal verification
+
+## 📊 Coverage Details
+
+**Instruction Coverage: 91%**
+- Arithmetic: 100%
+- Logical: 100%
+- Load/Store: 95%
+- Branch: 90%
+- Multiply/Divide: 95%
+
+**Functional Coverage: 87%**
+- Data paths: 89%
+- Control paths: 85%
+- Memory interface: 78%
+
+## 🐛 Corner Cases Found
+
+1. Memory alignment edge cases
+2. Back-to-back operation timing
+3. Branch prediction behavior
+
+All documented in [Bug Log](docs/bug_log.md)
+
+## 👤 Author
+
+**Vineet**
+B.Tech ECE | Final Year
+
+Seeking SoC/ASIC Verification Engineer roles
+
+## 📝 License
+
+MIT License
+
+---
+
+**Keywords**: RISC-V, Verification, SystemVerilog, ASIC, SoC, Digital Design, Testbench, Coverage
+EOF
+
