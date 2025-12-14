@@ -81,15 +81,6 @@ Professional verification environment for PicoRV32 RISC-V processor demonstratin
 
 *Phase 1 focused on core functionality. Structure ready for Phase 2 UVM migration.*
 
-## Project Highlights
-
-- ✅ UVM 1.2 compliant testbench
-- ✅ 10+ directed tests
-- ✅ Constrained random testing
-- ✅ Functional coverage 85%+
-- ✅ Bug tracking and fixes
-- ✅ Complete documentation
-
 ## Structure
 
 ```
