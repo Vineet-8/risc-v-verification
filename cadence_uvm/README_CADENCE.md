@@ -76,16 +76,7 @@ UVM_INFO: *** TEST PASSED ***
 ✅ Professional reporting
 ✅ Complete UVM hierarchy
 
-## Troubleshooting
 
-**Q: xrun not found**
-A: Load Cadence module: `module load cadence`
-
-**Q: License error**
-A: Contact lab admin for license access
-
-**Q: Compilation error**  
-A: Check that picorv32.v exists in `../rtl/` directory
 
 ## Success Indicators
 
@@ -95,14 +86,4 @@ A: Check that picorv32.v exists in `../rtl/` directory
 - Coverage report generated
 - No UVM_ERROR or UVM_FATAL
 
-## Support
 
-For issues, check:
-1. Cadence tools loaded: `which xrun`
-2. Files present: `ls -lh`
-3. Logs: `cat xrun_*.log`
-
-Ask lab admin for:
-- Cadence installation path
-- License server info
-- Module load commands
