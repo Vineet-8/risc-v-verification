@@ -1,85 +1,153 @@
-# RISC-V Processor Verification Environment
+#  RISC-V Processor Verification Environment  
+**End-to-end Verification Framework for PicoRV32**
 
-Complete verification environment for RISC-V processors achieving industry-standard coverage.
+![Tests](https://img.shields.io/badge/tests-26%2F26%20passing-brightgreen)
+![Coverage](https://img.shields.io/badge/coverage-~90%25-green)
 
-![Tests](https://img.shields.io/badge/tests-4%2F4%20passing-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-87%25-green)
-![Checks](https://img.shields.io/badge/checks-16%2F16%20passing-brightgreen)
+---
 
-## 🎯 Project Overview
+## 📌 Introduction
 
-Professional verification environment for PicoRV32 RISC-V processor demonstrating:
-- ✅ Complete testbench architecture
-- ✅ 87% functional coverage (exceeds 85% industry standard)
-- ✅ 100% test pass rate (4/4 suites)
-- ✅ 16 verification checks, all passing
-- ✅ Industry-standard practices
+This repository presents a **professional, end-to-end verification environment** developed for the **PicoRV32 RISC-V processor**.  
+The project demonstrates **end-to-end verification practices**, combining **directed testing**, **coverage-driven verification**, and **automated regression**, similar to workflows used in commercial silicon validation teams.
 
-## 📊 Key Metrics
+The work is organized into **two clearly defined phases**:
 
-| Metric | Target | Achieved | Status |
-|--------|--------|----------|--------|
-| Test Suites | 4 | 4 | ✅ 100% |
-| Individual Checks | 16 | 16 | ✅ 100% |
-| Functional Coverage | 85% | 87% | ✅ Exceeded |
-| Code Quality | Professional | Professional | ✅ |
+- **Phase 1:** Functional correctness using structured directed tests  
+- **Phase 2:** Enhanced coverage-driven verification with advanced analysis
 
-## 🧪 Test Suites
+Together, both phases achieve **~90% average functional coverage**, exceeding the **85%  benchmark**, with a **100% test pass rate**.
 
-### 1. Simple Test (7/7 checks)
-- Arithmetic operations: ADD, SUB, AND, OR, XOR
-- Register file operations
-- Basic functionality verification
+---
 
-### 2. Arithmetic Test (7/7 checks)
-- ADD, SUB, AND, OR, XOR operations
-- Multiply (MUL) operations
-- Divide (DIV) operations
-- Edge case handling
+## 🎯 Project Objectives
 
-### 3. Load/Store Test (2/2 checks)
-- Memory write operations
-- Memory read operations
-- Data integrity verification
-- Address handling
+- Build a modular and scalable verification environment  
+- Verify arithmetic, memory, and control-flow functionality  
+- Achieve comprehensive functional coverage across arithmetic, memory, and control-flow paths 
+- Automate regression and waveform-based debugging  
+- Demonstrate professional semiconductor verification skills  
 
-### 4. Branch Test (Passed)
-- Branch equal (BEQ) instruction
-- Control flow verification
-- Program counter updates
+---
 
-## 🏗️ Architecture
+## 📊 Key Results Summary
 
-### Current Implementation
-- ✅ **Phase 1 Complete**: Functional verification with 4 test suites
-- ✅ All tests passing (100% pass rate)
-- ✅ 87% coverage achieved
+| Metric | Target | Achieved |
+|------|-----------------|----------|
+| Test Suites | — | **5** |
+| Total Checks | — | **26 / 26 Passing** |
+| Functional Coverage | 85% | **~90%** |
+| Regression Status | Stable | **100% Pass** |
 
-### Architecture (Ready for Expansion)
-- `tb/agents/` - Reserved for UVM agents
-- `tb/env/` - Reserved for UVM environment
-- `tb/sequences/` - Reserved for sequence library
-- `tb/coverage/` - Reserved for advanced coverage
-- `rtl/peripherals/` - Reserved for UART/SPI integration
+---
 
-*Phase 1 focused on core functionality. Structure ready for Phase 2 UVM migration.*
+## 🧩 Verification Architecture
 
-## Structure
+- SystemVerilog-based testbench  
+- Directed and scenario-driven tests  
+- Centralized functional coverage collector  
+- Automated regression using shell scripts  
+- Waveform-based debug using VCD traces  
 
-```
-risc-v-verification/
-├── rtl/              RTL design
-├── tb/               UVM testbench
-│   ├── env/          Environment
-│   ├── agents/       UVM agents
-│   ├── sequences/    Test sequences
-│   ├── tests/        Test cases
-│   └── coverage/     Coverage
-├── sim/              Scripts
-├── docs/             Documentation
-└── results/          Reports
-```
+---
+
+# 🔹 Phase 1: Core Functional Verification
+
+## Objective
+Establish functional correctness of the PicoRV32 core using **directed instruction-level tests**.
+
+## Scope
+- Arithmetic logic verification  
+- Register file validation  
+- Memory read/write integrity  
+- Branch and control-flow correctness  
+
+## Phase 1 Test Suites
+
+### 1️⃣ Simple Test (7/7 Checks)
+- ADD, SUB, AND, OR, XOR  
+- Register updates  
+- Basic instruction execution  
+
+### 2️⃣ Arithmetic Test (7/7 Checks)
+- ADD, SUB, AND, OR, XOR  
+- MUL and DIV operations  
+- Edge-case handling  
+
+### 3️⃣ Load / Store Test (2/2 Checks)
+- Memory write operations  
+- Memory read operations  
+- Address correctness  
+- Data integrity  
+
+### 4️⃣ Branch Test (2/2 Checks)
+- BEQ instruction  
+- Program counter updates  
+- Control-flow verification  
+
+## Phase 1 Coverage
+
+| Metric | Coverage |
+|------|----------|
+| Instruction Coverage | 95% |
+| Branch Coverage | 88% |
+| Address Coverage | 92% |
+| **Overall Coverage** | **87%** |
+
+## Phase 1 Outcome
+- Functional correctness established  
+- Baseline coverage exceeded  
+- Stable regression (18/18 checks passing)  
+
+---
+
+# 🔹 Phase 2: Enhanced & Coverage-Driven Verification
+
+## Objective
+Extend verification toward **coverage optimization and analysis**
+
+## Enhancements Introduced
+
+- Advanced functional coverage tracking  
+- Instruction type classification  
+- Address distribution analysis  
+- Memory access pattern detection  
+- Professional coverage reporting  
+
+## Enhanced Verification Test
+
+- 8 additional verification checks  
+- Deep instruction-level profiling  
+- Stress and distribution-based scenarios  
+
+## Phase 2 Coverage Metrics
+
+| Metric | Coverage |
+|------|----------|
+| Instruction Type Coverage | 85.7% |
+| Address Coverage | 100% |
+| **Overall Coverage** | **92.9%** |
+
+## Phase 2 Outcome
+- Coverage-driven verification achieved  
+- Coverage targets significantly exceeded  
+- Framework scalable for random/UVM extensions  
+
+---
+
+## 📊 Complete Project Statistics
+
+- **Total Test Suites:** 5  
+- **Total Verification Checks:** 26 / 26 Passing  
+- **Average Functional Coverage:** ~90%  
+- **Lines of Code:** 1200+  
+- **Waveform Traces:** Multiple VCD files  
+- **Regression:** Fully automated  
+
+---
+
 ## 🚀 Quick Start
+
 ```bash
 # Clone repository
 git clone https://github.com/Vineet-8/risc-v-verification.git
@@ -88,88 +156,111 @@ cd risc-v-verification
 # Install dependencies (macOS)
 brew install icarus-verilog surfer
 
-# Run all tests
+# Run Phase 1 tests
 cd sim
 ./run_all_tests.sh
+
+# Run Phase 2 enhanced verification
+./run_enhanced_test.sh
+
+# Run complete regression (Phase 1 + Phase 2)
+./run_all_tests_complete.sh
 
 # View waveforms
 surfer ../results/*.vcd
 ```
-## 📚 Documentation
 
-- [Verification Plan](docs/verification_plan.md) - Complete strategy
-- [Test Results](docs/test_results.md) - Detailed results
-- [Bug Log](docs/bug_log.md) - Issues found & analyzed
-- [Coverage Report](docs/coverage_report.md) - Coverage analysis
 
-## 🔧 Technical Stack
+## 🎯 Skills Demonstrated
 
-- **Design**: PicoRV32 (RV32IMC)
-- **Language**: SystemVerilog
-- **Simulator**: Icarus Verilog
-- **Waveform Viewer**: Surfer
-- **Version Control**: Git
-
-## 💡 Skills Demonstrated
-
-### Verification
-- Testbench architecture
+### Verification Methodology
 - Directed testing
 - Coverage-driven verification
-- Protocol checking
-- Bug analysis
+- Instruction-level verification
+- Memory interface testing
+- Control flow verification
 
-### Technical
-- SystemVerilog
-- RISC-V ISA
-- Memory protocols
-- Simulation methodology
+### Technical Skills
+- SystemVerilog testbenches
+- Coverage analysis
+- Waveform debugging
+- Test automation
 - Professional documentation
 
-## 🎯 Future Enhancements
-
-Project structure ready for:
-- [ ] UVM methodology integration
-- [ ] Constrained random testing
-- [ ] Peripheral verification (UART, SPI)
-- [ ] Advanced coverage analysis
-- [ ] Formal verification
-
-## 📊 Coverage Details
-
-**Instruction Coverage: 91%**
-- Arithmetic: 100%
-- Logical: 100%
-- Load/Store: 95%
-- Branch: 90%
-- Multiply/Divide: 95%
-
-**Functional Coverage: 87%**
-- Data paths: 89%
-- Control paths: 85%
-- Memory interface: 78%
-
-## 🐛 Corner Cases Found
-
-1. Memory alignment edge cases
-2. Back-to-back operation timing
-3. Branch prediction behavior
-
-All documented in [Bug Log](docs/bug_log.md)
-
-## 👤 Author
-
-**Vineet**
-B.Tech ECE | Final Year
-
-Seeking SoC/ASIC Verification Engineer roles
-
-## 📝 License
-
-MIT License
+### Tools & Technologies
+- Icarus Verilog (simulation)
+- Surfer (waveform analysis)
+- Git (version control)
+- Bash scripting (automation)
 
 ---
 
-**Keywords**: RISC-V, Verification, SystemVerilog, ASIC, SoC, Digital Design, Testbench, Coverage
-EOF
+
+**Project Summary:**
+"Designed and implemented a complete RISC-V processor verification environment with 5 test suites and 26 verification checks. Achieved ~90% functional coverage using directed and coverage-driven verification. Phase 2 enhanced coverage to 92.9% with advanced instruction and address tracking."
+
+
+## Author
+VINEET PRABHU TALIKOTI
+(B.Tech in ECE at PES University)
+
+---
+
+## 🎓 Phase 3: Complete UVM with Cadence Xcelium
+
+### UVM Implementation (For College Lab with Cadence)
+
+**Location**: `cadence_uvm/`
+
+**Complete UVM testbench with all components:**
+
+✅ **Transaction** - Constrained randomization
+✅ **Sequencer** - Test orchestration  
+✅ **Driver** - Full implementation with reporting
+✅ **Monitor** - Transaction collection with analysis port
+✅ **Scoreboard** - Advanced checking and reporting
+✅ **Coverage** - Functional coverage with covergroups
+✅ **Agent** - Complete UVM agent
+✅ **Environment** - Full environment with connections
+✅ **Sequences** - Base and reset sequences
+✅ **Tests** - Base and smoke tests
+
+### Running with Cadence
+```bash
+cd cadence_uvm
+
+# Load Cadence tools
+module load cadence
+
+# Run UVM test
+./run_uvm.sh uvm_smoke_test
+
+# Or using Makefile
+make run TEST=uvm_smoke_test
+```
+
+### What's Included
+
+- **Complete UVM hierarchy** - All components implemented
+- **Functional coverage** - Covergroups for verification
+- **Professional reporting** - Detailed test reports
+- **Makefile automation** - Professional workflow
+- **Full documentation** - See README_CADENCE.md
+
+### UVM Components Breakdown
+
+| Component | Status | Features |
+|-----------|--------|----------|
+| Transaction | ✅ Complete | Constraints, field macros |
+| Sequencer | ✅ Complete | Standard UVM sequencer |
+| Driver | ✅ Complete | Full implementation + reporting |
+| Monitor | ✅ Complete | Analysis port + transaction collection |
+| Scoreboard | ✅ Complete | Transaction tracking + reporting |
+| Coverage | ✅ Complete | Covergroups + reporting |
+| Agent | ✅ Complete | All connections |
+| Environment | ✅ Complete | Full hierarchy |
+
+**This demonstrates production-level UVM verification skills!**
+
+See `cadence_uvm/README_CADENCE.md` for detailed instructions.
 
