@@ -1,0 +1,3 @@
+s1(15Dec2025:23:59:39):  xrun -64bit -sv -uvm +UVM_TESTNAME=uvm_smoke_test +UVM_VERBOSITY=UVM_MEDIUM -access +rwc -linedebug -coverage all -covoverwrite -f filelist.f -log xrun_uvm_smoke_test.log -timescale 1ns/1ps 
+s2(16Dec2025:00:14:49):  xrun -64bit -sv -uvm +UVM_TESTNAME=uvm_smoke_test +UVM_VERBOSITY=UVM_MEDIUM -access +rwc -linedebug -coverage all -covoverwrite -f filelist.f -log xrun_uvm_smoke_test.log -timescale 1ns/1ps 
+s3(16Dec2025:00:19:39):  xrun -64bit -sv -uvm +UVM_TESTNAME=uvm_read_test +UVM_VERBOSITY=UVM_MEDIUM -access +rwc -linedebug -coverage all -covoverwrite -f filelist.f -log xrun_uvm_read_test.log -timescale 1ns/1ps 

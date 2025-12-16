@@ -1,0 +1,118 @@
+xrun(64): 22.09-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s003: Started on Dec 16, 2025 at 00:24:29 IST
+xrun
+	-64bit
+	-sv
+	-uvm
+	-access +rwc
+	-linedebug
+	-timescale 1ns/1ps
+	-gui
+	+UVM_TESTNAME=uvm_smoke_test
+	-f filelist.f
+		../rtl/picorv32.v
+		./riscv_if.sv
+		./riscv_pkg.sv
+		./top_uvm_tb.sv
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	) picorv32_core (
+	              |
+xmelab: *W,CUVWSP (../rtl/picorv32.v,2674|15): 5 output ports were not connected:
+xmelab: (../rtl/picorv32.v,103): mem_la_read
+xmelab: (../rtl/picorv32.v,104): mem_la_write
+xmelab: (../rtl/picorv32.v,105): mem_la_addr
+xmelab: (../rtl/picorv32.v,106): mem_la_wdata
+xmelab: (../rtl/picorv32.v,107): mem_la_wstrb
+
+	) picorv32_core (
+	              |
+xmelab: *W,CUVWSP (../rtl/picorv32.v,2938|15): 5 output ports were not connected:
+xmelab: (../rtl/picorv32.v,103): mem_la_read
+xmelab: (../rtl/picorv32.v,104): mem_la_write
+xmelab: (../rtl/picorv32.v,105): mem_la_addr
+xmelab: (../rtl/picorv32.v,106): mem_la_wdata
+xmelab: (../rtl/picorv32.v,107): mem_la_wstrb
+
+    ) dut (
+        |
+xmelab: *W,CUVWSP (./top_uvm_tb.sv,17|8): 1 output port was not connected:
+xmelab: (../rtl/picorv32.v,91): trap
+
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		riscv_pkg
+		picorv32_regs
+		picorv32_axi
+		picorv32_wb
+		top_uvm_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.picorv32_pcpi_div:v <0x34562547>
+			streams:  33, words: 14684
+		worklib.picorv32_pcpi_mul:v <0x03febbad>
+			streams:  41, words: 24520
+		worklib.picorv32:v <0x4d49be40>
+			streams: 425, words: 232840
+		worklib.picorv32_wb:v <0x78c517a9>
+			streams:  32, words: 10587
+		worklib.picorv32:v <0x5faa5d41>
+			streams: 412, words: 227433
+		worklib.picorv32_axi_adapter:v <0x46684a79>
+			streams:  21, words:  6428
+		worklib.picorv32_regs:v <0x1dfc9de0>
+			streams:   4, words:  1783
+		worklib.top_uvm_tb:sv <0x40f39897>
+			streams: 877, words: 1385318
+		worklib.cdns_uvm_pkg:sv <0x290f7acf>
+			streams: 183, words: 404495
+		worklib.cdns_uvmapi:svp <0x60983372>
+			streams:  27, words: 46809
+		worklib.cdns_assert2uvm_pkg:sv <0x4fea221e>
+			streams:   3, words:  3344
+		worklib.uvm_pkg:sv <0x48055f0e>
+			streams: 5407, words: 12280804
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                      10       9
+		Interfaces:                    1       1
+		Verilog packages:              5       5
+		Registers:                 14935   10578
+		Scalar wires:                117       -
+		Vectored wires:               79       -
+		Named events:                  4      12
+		Always blocks:                68      34
+		Initial blocks:              316     168
+		Parallel blocks:              26      27
+		Cont. assignments:           107      66
+		Pseudo assignments:           20      20
+		Assertions:                    2       2
+		Covergroup Instances:          0       1
+		SV Class declarations:       208     321
+		SV Class specializations:    401     401
+		Simulation timescale:        1ps
+	Writing initial simulation snapshot: worklib.picorv32_regs:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /home/install/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> source /home/install/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm picorv32_axi.clk picorv32_axi.eoi picorv32_axi.irq picorv32_axi.mem_addr picorv32_axi.mem_axi_araddr picorv32_axi.mem_axi_arprot picorv32_axi.mem_axi_arready picorv32_axi.mem_axi_arvalid picorv32_axi.mem_axi_awaddr picorv32_axi.mem_axi_awprot picorv32_axi.mem_axi_awready picorv32_axi.mem_axi_awvalid picorv32_axi.mem_axi_bready picorv32_axi.mem_axi_bvalid picorv32_axi.mem_axi_rdata picorv32_axi.mem_axi_rready picorv32_axi.mem_axi_rvalid picorv32_axi.mem_axi_wdata picorv32_axi.mem_axi_wready picorv32_axi.mem_axi_wstrb picorv32_axi.mem_axi_wvalid picorv32_axi.mem_instr picorv32_axi.mem_rdata picorv32_axi.mem_ready picorv32_axi.mem_valid picorv32_axi.mem_wdata picorv32_axi.mem_wstrb picorv32_axi.pcpi_insn picorv32_axi.pcpi_rd picorv32_axi.pcpi_ready picorv32_axi.pcpi_rs1 picorv32_axi.pcpi_rs2 picorv32_axi.pcpi_valid picorv32_axi.pcpi_wait picorv32_axi.pcpi_wr picorv32_axi.resetn picorv32_axi.trace_data picorv32_axi.trace_valid picorv32_axi.trap
+Created probe 1
+xcelium> coverage -analyze
+xmsim: *E,NOCOVE: Loaded snapshot was not instrumented for any coverage type. To generate coverage data, coverage type(s) must be specified at the elaboration stage using appropriate coverage options/commands.
+xcelium> ^C
+xcelium> 
